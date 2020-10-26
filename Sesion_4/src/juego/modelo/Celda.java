@@ -9,7 +9,7 @@ package juego.modelo;
 public class Celda {
     private int fila;
     private int columna;
-    private Pieza pieza;
+    private Pieza pieza=null;
 
     public Celda(int fila, int columna) {
         this.fila = fila;

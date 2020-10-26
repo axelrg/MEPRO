@@ -44,7 +44,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test/juego/modelo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -52,8 +52,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Axel\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_4\test\juego\modelo" />
       <recent name="C:\Users\Axel\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_4" />
+      <recent name="C:\Users\Axel\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_4\test\juego\modelo" />
       <recent name="C:\Users\Axel\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_4\src" />
       <recent name="C:\Users\Axel\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO" />
     </key>
@@ -61,7 +61,7 @@
       <recent name="juego.modelo" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Sesion_4">
+  <component name="RunManager" selected="JUnit.TableroTest">
     <configuration name="All in Sesion_4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sesion_4" />
       <option name="PACKAGE_NAME" value="" />
@@ -100,6 +100,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TableroTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sesion_4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="juego.modelo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="juego.modelo" />
+      <option name="MAIN_CLASS_NAME" value="juego.modelo.TableroTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="juego.modelo in Sesion_4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sesion_4" />
       <extension name="coverage">
@@ -116,6 +131,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TableroTest" />
         <item itemvalue="JUnit.All in Sesion_4" />
         <item itemvalue="JUnit.juego.modelo in Sesion_4" />
         <item itemvalue="JUnit.ColorTest" />
@@ -147,33 +163,41 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1603118830918">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1603187877081">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1603118830918" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1603187877081" />
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603119827988">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1603119827988" />
-    <state width="1493" height="211" key="GridCell.Tab.0.bottom" timestamp="1603120799593">
+    <state width="1493" height="228" key="GridCell.Tab.0.bottom" timestamp="1603716896328">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="211" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1603120799593" />
-    <state width="1493" height="211" key="GridCell.Tab.0.center" timestamp="1603120799593">
+    <state width="1493" height="228" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1603716896328" />
+    <state width="1372" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603291893673" />
+    <state width="1493" height="228" key="GridCell.Tab.0.center" timestamp="1603716896327">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="211" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1603120799593" />
-    <state width="1493" height="211" key="GridCell.Tab.0.left" timestamp="1603120799593">
+    <state width="1493" height="228" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1603716896327" />
+    <state width="1372" height="227" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603291893673" />
+    <state width="1493" height="228" key="GridCell.Tab.0.left" timestamp="1603716896327">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="211" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1603120799593" />
-    <state width="1493" height="211" key="GridCell.Tab.0.right" timestamp="1603120799593">
+    <state width="1493" height="228" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1603716896327" />
+    <state width="1372" height="227" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603291893673" />
+    <state width="1493" height="228" key="GridCell.Tab.0.right" timestamp="1603716896327">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="211" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1603120799593" />
+    <state width="1493" height="228" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1603716896327" />
+    <state width="1372" height="227" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603291893673" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1603120570824">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1603120570824" />
+    <state x="425" y="189" key="run.anything.popup" timestamp="1603716257688">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1603716257688" />
   </component>
 </project>
