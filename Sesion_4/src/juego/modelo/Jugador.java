@@ -1,10 +1,10 @@
-/**
- *
- * @author Axel Rubio Gonzalez
- *
- */
-package juego.modelo;
 
+package juego.modelo;
+/**
+ * (El codigo completamente comentado es el de pieza).
+ * @author Axel Rubio Gonzalez
+ * @version 1.0
+ */
 public class Jugador {
     String nombre;
     Color color;

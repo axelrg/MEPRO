@@ -4,6 +4,11 @@ import juego.util.Direccion;
 
 import java.util.Arrays;
 
+/**
+ * (El codigo completamente comentado es el de pieza).
+ * @author Axel Rubio Gonzalez
+ * @version 1.0
+ */
 public class Tablero {
     Celda [][] tablero;
 
@@ -54,108 +59,58 @@ public class Tablero {
         return false;
     }
 
+    private int piezas(Celda celda, int d1, int d2){
+        int piezas=0;
+        int i = 0;
+        for (int j=0;j<2;j++){
+
+            if (j > 0) {
+                d2=-d2;
+                d1=-d1;
+                i = 1;
+            }
+            
+            while (estaEnTablero(celda.obtenerFila()+i*d1, celda.obtenerColumna() + i*d2)) {
+                if (celda.obtenerPieza() != null && tablero[celda.obtenerFila()+i*d1][celda.obtenerColumna() + i*d2].obtenerPieza() != null && celda.obtenerPieza().obtenerColor() == tablero[celda.obtenerFila()+i*d1][celda.obtenerColumna() + i*d2].obtenerPieza().obtenerColor()) {
+                    piezas++;
+                    i++;
+                } else
+                    break;
+            }
+        }
+
+
+
+
+        while (estaEnTablero(celda.obtenerFila()+i*d1, celda.obtenerColumna() + i*d2)) {
+            if (celda.obtenerPieza() != null && tablero[celda.obtenerFila()+i*d1][celda.obtenerColumna() + i*d2].obtenerPieza() != null && celda.obtenerPieza().obtenerColor() == tablero[celda.obtenerFila()+i*d1][celda.obtenerColumna() + i*d2].obtenerPieza().obtenerColor()) {
+                piezas++;
+                i++;
+            } else
+                break;
+        }
+        return piezas;
+    }
+
     public int contarPiezas(Celda celda, Direccion direccion){
         int piezas = 0;
         switch (direccion) {
 
 
             case HORIZONTAL:
-                /**
-                 *   0  1  2
-                 * 0 -  -  -            N
-                 * 1 -  -  -        O       E
-                 * 2 -  -  -            S
-                 */
-                int i = 0;
-                while (estaEnTablero(celda.obtenerFila(), celda.obtenerColumna() + i)) {
-                    if (celda.obtenerPieza() != null && tablero[celda.obtenerFila()][celda.obtenerColumna() + i].obtenerPieza() != null && celda.obtenerPieza().obtenerColor() == tablero[celda.obtenerFila()][celda.obtenerColumna() + i].obtenerPieza().obtenerColor()) {
-                        piezas++;
-                        i++;
-                    } else
-                        break;
-
-                }
-                i = 1;
-
-                while (estaEnTablero(celda.obtenerFila(), celda.obtenerColumna() - i)) {
-                    if (celda.obtenerPieza() != null && tablero[celda.obtenerFila()][celda.obtenerColumna() - i].obtenerPieza() != null && celda.obtenerPieza().obtenerColor() == tablero[celda.obtenerFila()][celda.obtenerColumna() - i].obtenerPieza().obtenerColor()){
-                        piezas++;
-                    i++;
-                    }else
-                        break;
-                }
-
-
+                piezas=piezas(celda,0,1);
                 break;
 
             case VERTICAL:
-                /**
-                 *   0  1  2
-                 * 0 -  -  -            N
-                 * 1 -  -  -        O       E
-                 * 2 -  -  -            S
-                 */
-                int i_v = 0;
-                while (estaEnTablero(celda.obtenerFila()+ i_v, celda.obtenerColumna() )) {
-                    if (celda.obtenerPieza() != null && tablero[celda.obtenerFila()+ i_v][celda.obtenerColumna() ].obtenerPieza() != null && celda.obtenerPieza().obtenerColor() == tablero[celda.obtenerFila()+ i_v][celda.obtenerColumna() ].obtenerPieza().obtenerColor()) {
-                        piezas++;
-                        i_v++;
-                    } else
-                        break;
-
-                }
-                i_v = 1;
-
-                while (estaEnTablero(celda.obtenerFila() - i_v, celda.obtenerColumna())) {
-                    if (celda.obtenerPieza() != null && tablero[celda.obtenerFila()- i_v][celda.obtenerColumna() ].obtenerPieza() != null && celda.obtenerPieza().obtenerColor() == tablero[celda.obtenerFila()- i_v][celda.obtenerColumna() ].obtenerPieza().obtenerColor()){
-                        piezas++;
-                        i_v++;
-                    }else
-                        break;
-                }
-
+                piezas=piezas(celda,1,0);
                 break;
 
             case DIAGONAL_NO_SE:
-                int i_no_se = 0;
-                while (estaEnTablero(celda.obtenerFila()+ i_no_se, celda.obtenerColumna()+i_no_se )) {
-                    if (celda.obtenerPieza() != null && tablero[celda.obtenerFila()+ i_no_se][celda.obtenerColumna()+ i_no_se].obtenerPieza() != null && celda.obtenerPieza().obtenerColor() == tablero[celda.obtenerFila()+ i_no_se][celda.obtenerColumna()+ i_no_se ].obtenerPieza().obtenerColor()) {
-                        piezas++;
-                        i_no_se++;
-                    } else
-                        break;
-
-                }
-                i_no_se = 1;
-
-                while (estaEnTablero(celda.obtenerFila() - i_no_se, celda.obtenerColumna()- i_no_se)) {
-                    if (celda.obtenerPieza() != null && tablero[celda.obtenerFila()- i_no_se][celda.obtenerColumna()- i_no_se ].obtenerPieza() != null && celda.obtenerPieza().obtenerColor() == tablero[celda.obtenerFila()- i_no_se][celda.obtenerColumna()- i_no_se ].obtenerPieza().obtenerColor()){
-                        piezas++;
-                        i_no_se++;
-                    }else
-                        break;
-                }
+                piezas=piezas(celda,1,1);
                 break;
 
             case DIAGONAL_SO_NE:
-                int i_so_ne = 0;
-                while (estaEnTablero(celda.obtenerFila()+ i_so_ne, celda.obtenerColumna()-i_so_ne )) {
-                    if (celda.obtenerPieza() != null && tablero[celda.obtenerFila()+ i_so_ne][celda.obtenerColumna()- i_so_ne].obtenerPieza() != null && celda.obtenerPieza().obtenerColor() == tablero[celda.obtenerFila()+ i_so_ne][celda.obtenerColumna()- i_so_ne ].obtenerPieza().obtenerColor()) {
-                        piezas++;
-                        i_so_ne++;
-                    } else
-                        break;
-
-                }
-                i_so_ne = 1;
-
-                while (estaEnTablero(celda.obtenerFila() - i_so_ne, celda.obtenerColumna()+ i_so_ne)) {
-                    if (celda.obtenerPieza() != null && tablero[celda.obtenerFila() - i_so_ne][celda.obtenerColumna() + i_so_ne].obtenerPieza() != null && celda.obtenerPieza().obtenerColor() == tablero[celda.obtenerFila() - i_so_ne][celda.obtenerColumna() + i_so_ne].obtenerPieza().obtenerColor()) {
-                        piezas++;
-                        i_so_ne++;
-                    } else
-                        break;
-                }
+                piezas=piezas(celda,1,-1);
                 break;
         }
 
