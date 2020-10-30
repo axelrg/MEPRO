@@ -1,7 +1,8 @@
 package juego.modelo;
 
 /**
- * (El codigo completamente comentado es el de pieza).
+ * Enumeracion con los colores.
+ *
  * @author Axel Rubio Gonzalez
  * @version 1.0
  */

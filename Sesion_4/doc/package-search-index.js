@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"juego.modelo"},{"l":"juego.util"}]
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"juego.control"},{"l":"juego.interfaz"},{"l":"juego.modelo"},{"l":"juego.util"}]

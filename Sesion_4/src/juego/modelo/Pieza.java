@@ -3,17 +3,23 @@ package juego.modelo;
 /**
  * La clase pieza que representa una pieza del tres en raya.
  * Cada pieza cuenta con un color y una celda a la que esta asignada.
+ *
  * @author Axel Rubio Gonzalez
  * @version 1.0
  */
 public class Pieza {
-    /**Color de la pieza.*/
+    /**
+     * Color de la pieza.
+     */
     Color color;
-    /**Celda en que esta la pieza.*/
+    /**
+     * Celda en que esta la pieza.
+     */
     Celda celda;
 
     /**
      * Constructor de la clase, crea una pieza con un color determinado.
+     *
      * @param color color de la pieza
      */
     public Pieza(Color color) {
@@ -22,6 +28,7 @@ public class Pieza {
 
     /**
      * Getter del parametro color.
+     *
      * @return devuelve el color de la pieza
      */
     public Color obtenerColor() {
@@ -30,6 +37,7 @@ public class Pieza {
 
     /**
      * Setter del parametro color.
+     *
      * @param color color de la pieza
      */
     private void establecerColor(Color color) {
@@ -38,6 +46,7 @@ public class Pieza {
 
     /**
      * Getter de la celda en la que esta una pieza.
+     *
      * @return la celda en la que esta la pieza
      */
     public Celda obtenerCelda() {
@@ -46,7 +55,8 @@ public class Pieza {
 
     /**
      * Setter de la celda en la que esta una pieza.
-     * @param celda  la celda en la que esta la pieza
+     *
+     * @param celda la celda en la que esta la pieza
      */
     public void establecerCelda(Celda celda) {
         this.celda = celda;
