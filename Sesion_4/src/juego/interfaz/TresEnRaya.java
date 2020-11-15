@@ -54,7 +54,6 @@ public class TresEnRaya {
                 arbitro.tablero.colocar(pieza, arbitro.tablero.obtenerCelda(x, y));
             }
 
-
             // Inicialización del juego según los argumentos validados
             // COMPLETAR POR EL ALUMNO
 

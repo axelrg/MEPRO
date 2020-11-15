@@ -74,11 +74,8 @@ public class ArbitroTresEnRaya {
 
 
     public void jugar(int x, int y) {
-        if (esMovimientoLegal(x, y))
+        if (esMovimientoLegal(x, y) && !estaAcabado())
             tablero.colocar(obtenerTurno().generarPieza(), tablero.obtenerCelda(x, y));
-
-        estaAcabado();
-
     }
 
     public boolean esMovimientoLegal(int x, int y) {
