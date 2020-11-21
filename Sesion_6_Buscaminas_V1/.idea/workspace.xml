@@ -44,24 +44,38 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test/test/juego/modelo" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/lib/buscaminas-gui-lib-1.0.0.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ONE_DRIVE\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_6_Buscaminas_V1\src" />
+      <recent name="E:\ONE_DRIVE\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_6_Buscaminas_V1\test\test\juego\control" />
       <recent name="C:\Users\Axel\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_6_Buscaminas_V1\test\test\juego\modelo" />
       <recent name="E:\ONE_DRIVE\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_6_Buscaminas_V1\test\test\juego\modelo" />
       <recent name="E:\ONE_DRIVE\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_6_Buscaminas_V1" />
-      <recent name="E:\ONE_DRIVE\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_6_Buscaminas_V1\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\ONE_DRIVE\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_6_Buscaminas_V1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Sesion_6_Buscaminas_V1">
+  <component name="RunManager" selected="Application.Buscaminas">
+    <configuration name="Buscaminas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="juego.gui.Buscaminas" />
+      <module name="Sesion_6_Buscaminas_V1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="juego.textui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in Sesion_6_Buscaminas_V1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sesion_6_Buscaminas_V1" />
       <option name="PACKAGE_NAME" value="" />
@@ -70,47 +84,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CeldaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="test.juego.control in Sesion_6_Buscaminas_V1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sesion_6_Buscaminas_V1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.juego.modelo.*" />
+          <option name="PATTERN" value="test.juego.control.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.juego.modelo" />
-      <option name="MAIN_CLASS_NAME" value="test.juego.modelo.CeldaTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SentidoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sesion_6_Buscaminas_V1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="juego.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.juego.util" />
-      <option name="MAIN_CLASS_NAME" value="juego.util.SentidoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TableroTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sesion_6_Buscaminas_V1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.juego.modelo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.juego.modelo" />
-      <option name="MAIN_CLASS_NAME" value="test.juego.modelo.TableroTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="test.juego.control" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,13 +112,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="buscaminas-gui-lib-1.0.0.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/lib/lib/buscaminas-gui-lib-1.0.0.jar" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Buscaminas" />
+      <item itemvalue="JAR Application.buscaminas-gui-lib-1.0.0.jar" />
+      <item itemvalue="JUnit.All in Sesion_6_Buscaminas_V1" />
+      <item itemvalue="JUnit.test.juego.control in Sesion_6_Buscaminas_V1" />
+      <item itemvalue="JUnit.test.juego.modelo in Sesion_6_Buscaminas_V1" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Buscaminas" />
+        <item itemvalue="JAR Application.buscaminas-gui-lib-1.0.0.jar" />
         <item itemvalue="JUnit.All in Sesion_6_Buscaminas_V1" />
+        <item itemvalue="JUnit.test.juego.control in Sesion_6_Buscaminas_V1" />
         <item itemvalue="JUnit.test.juego.modelo in Sesion_6_Buscaminas_V1" />
-        <item itemvalue="JUnit.TableroTest" />
-        <item itemvalue="JUnit.CeldaTest" />
-        <item itemvalue="JUnit.SentidoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -163,55 +159,92 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1605480607667">
+    <state x="740" y="336" key="#BuildArtifactsBeforeRunChooser" timestamp="1605916883646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605480607667" />
+    <state x="740" y="336" key="#BuildArtifactsBeforeRunChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605916883646" />
+    <state x="414" y="174" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605917134795">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605917134795" />
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1605531916165">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605531916165" />
+    <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1605916693036">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605916693036" />
     <state x="281" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1604937385910">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="281" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1604937385910" />
+    <state x="689" y="321" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1605917131855">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="321" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605917131855" />
     <state x="431" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1604832751401">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="431" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604832751401" />
-    <state x="549" y="158" key="FileChooserDialogImpl" timestamp="1604945674194">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1604945674194" />
-    <state width="1877" height="258" key="GridCell.Tab.0.bottom" timestamp="1605481920582">
+    <state x="686" y="197" key="FileChooserDialogImpl" timestamp="1605916805196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1604938829637" />
-    <state width="1877" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605481920582" />
-    <state width="1877" height="258" key="GridCell.Tab.0.center" timestamp="1605481920582">
+    <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1605537690547" />
+    <state x="686" y="197" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605916805196" />
+    <state width="1877" height="256" key="GridCell.Tab.0.bottom" timestamp="1605960627827">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1604938829637" />
-    <state width="1877" height="258" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605481920582" />
-    <state width="1877" height="258" key="GridCell.Tab.0.left" timestamp="1605481920582">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1605628013265" />
+    <state width="1877" height="256" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605960627827" />
+    <state width="1877" height="256" key="GridCell.Tab.0.center" timestamp="1605960627826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1604938829637" />
-    <state width="1877" height="258" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605481920582" />
-    <state width="1877" height="258" key="GridCell.Tab.0.right" timestamp="1605481920582">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1605628013261" />
+    <state width="1877" height="256" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605960627826" />
+    <state width="1877" height="256" key="GridCell.Tab.0.left" timestamp="1605960627826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1604938829637" />
-    <state width="1877" height="258" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605481920582" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1604851739446">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1605628013261" />
+    <state width="1877" height="256" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605960627826" />
+    <state width="1877" height="256" key="GridCell.Tab.0.right" timestamp="1605960627826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604851739446" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1605628013261" />
+    <state width="1877" height="256" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605960627826" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1605532287882">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605532287882" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1605532287882">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605532287882" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1605532287882">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605532287882" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1605532287882">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605532287882" />
+    <state x="787" y="188" key="SettingsEditor" timestamp="1605916146908">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="787" y="188" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605916146908" />
+    <state x="855" y="266" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey" timestamp="1605916898959">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="855" y="266" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey/0.0.1920.1040@0.0.1920.1040" timestamp="1605916898959" />
     <state x="394" y="191" width="905" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1605481159851">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="315" y="153" width="905" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.834@0.0.1536.834" timestamp="1604938797990" />
     <state x="394" y="191" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1605481159851" />
-    <state x="209" y="37" key="new project wizard" timestamp="1604945676454">
+    <state x="209" y="37" key="new project wizard" timestamp="1605537694297">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="209" y="37" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1604945676454" />
+    <state x="209" y="37" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1605537694297" />
     <state x="180" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1604933763456">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

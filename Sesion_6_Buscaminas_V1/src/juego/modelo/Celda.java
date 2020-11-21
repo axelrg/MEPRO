@@ -1,5 +1,7 @@
 package juego.modelo;
 
+import juego.util.Sentido;
+
 import java.util.Objects;
 
 public class Celda {
@@ -32,6 +34,7 @@ public class Celda {
     }
 
     public void establecerNumeroMinasAdyacentes(int numeroMinas) {
+
         this.numeroMinas = numeroMinas;
     }
 
@@ -144,6 +147,7 @@ public class Celda {
         return tieneMina;
     }
 
+    @Override
     public String toString() {
         return "[(" + fila + "," + columna + ")-" + obtenerNumeroMinasAdyacentes() + "-" + estado + "]";
     }
