@@ -3,270 +3,290 @@ package juego.textui;
 import java.util.Scanner;
 
 import juego.control.Arbitro;
+import org.junit.platform.console.shadow.picocli.CommandLine;
 
 /**
  * Buscaminas en modo texto.
- * 
+ * <p>
  * Se abusa del uso de static tanto en atributos como en métodos para comprobar
  * su similitud a variables globales y funciones globales de otros lenguajes.
  *
  * @author <a href="rmartico@ubu.es">Raúl Marticorena</a>
- * @since 1.0
  * @version 1.0
+ * @since 1.0
  */
 public class Buscaminas {
 
-	/**
-	 * Arbitro.
-	 */
-	private static Arbitro arbitro;
+    /**
+     * Arbitro.
+     */
+    private static Arbitro arbitro;
 
-	/**
-	 * Lector por teclado.
-	 */
-	private static Scanner scanner;
+    /**
+     * Lector por teclado.
+     */
+    private static Scanner scanner;
 
-	/**
-	 * Método raíz.
-	 * 
-	 * @param args argumentos de entrada
-	 */
-	public static void main(String[] args) {
-		mostrarMensajeBienvenida();
-		inicializarPartida();
-		mostrarTableroEnPantalla();
-		realizarJugada(recogerJugada());
-		finalizarPartida();
-	}
+    /**
+     * Método raíz.
+     *
+     * @param args argumentos de entrada
+     */
+    public static void main(String[] args) {
 
-	/**
-	 * Descubre todas las celdas ocultas para finalizar partida.
-	 */
-	private static void descubrirTodaCeldasOcultas() {
-		arbitro.descubrirOcultas();
-	}
+        mostrarMensajeBienvenida();
+        inicializarPartida();
+        do {
+            mostrarTableroEnPantalla();
+            String texto = recogerJugada();
+            if (comprobarSiFinalizaUsuarioPartida(texto)) {
+                finalizarPartida();
+                System.exit(0);
+            } else if (hayQueDescubrirOcultas(texto)) {
+                descubrirTodaCeldasOcultas();
+            } else {
+                if (validarFormato(texto)) {
+                    realizarJugada(texto);
+                    hacerTrampas(comprobar(args));
+                } else {
+                    mostrarErrorEnFormatoDeEntrada();
+                }
+            }
 
-	/**
-	 * Comprueba los argumentos de ejecución para comprobar si hacemos trampas o no.
-	 * 
-	 * @param args argumentos
-	 * @return true si el usuario quiere jugar haciendo trampas mostrando la
-	 *         solución en pantalla
-	 */
-	private static boolean comprobar(String[] args) {
-		return args.length == 1 && args[0].toLowerCase().equals("trampas");
-	}
+        } while (!esFinDePartida());
 
-	/**
-	 * Comprueba si ha finalizado la partida.
-	 * 
-	 * @return true si ha explotado alguna mina o hemos desmarcado todas las celdas
-	 *         ocultas menos las minas
-	 */
-	private static boolean esFinDePartida() {
-		return (arbitro.haExplotadoAlgunaMina() || arbitro.haFinalizadoConExito());
-	}
+        finalizarPartida();
 
-	/**
-	 * Realiza la jugada introducida por teclado realizando las correspondientes
-	 * comprobaciones relativas a las reglas del juego.
-	 * 
-	 * Se supone que la jugada en cuanto al formato ya ha sido validada previamente.
-	 * 
-	 * @param jugada jugada
-	 */
-	private static void realizarJugada(String jugada) {
-		int fila = leerFila(jugada);
-		int columna = leerColumna(jugada);
-		if (estaColocandoOQuitandoBandera(jugada)) {
-			if (arbitro.esLegalMarcar(fila, columna) || arbitro.esLegalDesmarcar(fila, columna)) {
-				// si el movimiento de marcado es legal
-				arbitro.marcarODesmarcar(fila, columna);
-			} else {
-				System.out.println(
-						"Movimiento ilegal.\nComprueba que no estás marcando una celda ya marcada o descubierta\n"
-								+ "o que no estás intentando colocar más banderas que las permitidas.");
-			}
-		} else {
-			if (arbitro.esLegalDescubrir(fila, columna)) { // si el movimiento de descubrir es legal
-				arbitro.descubrir(fila, columna);
-			} else {
-				System.out.println(
-						"Movimiento ilegal.\nComprueba que no estás descubriendo una celda ya descubierta o marcada.");
-			}
-		}
-	}
+    }
 
-	/**
-	 * Muestra el mensaje de bienvenida con instrucciones para finalizar la partida.
-	 */
-	private static void mostrarMensajeBienvenida() {
-		System.out.println("Bienvenido al juego del Buscaminas");
-		System.out.println("Para finalizar el juego introduzca \"salir\".");
-		System.out.println("Disfrute de la partida...");
-	}
+    /**
+     * Descubre todas las celdas ocultas para finalizar partida.
+     */
+    private static void descubrirTodaCeldasOcultas() {
+        arbitro.descubrirOcultas();
+    }
 
-	/**
-	 * Mostrar al usuario información de error en el formato de entrada, mostrando
-	 * ejemplos.
-	 */
-	private static void mostrarErrorEnFormatoDeEntrada() {
-		System.out.println();
-		System.out.println("Error en el formato de entrada.");
-		System.out.println(
-				"El formato debe ser filacolumna y opcionalmente una m o M para marcar con bandera, por ejemplo 34 o 34m");
-		System.out.println("Los números estarán en el rango [0,7] y la letra opcional deberá ser una m o M\n");
-	}
+    /**
+     * Comprueba los argumentos de ejecución para comprobar si hacemos trampas o no.
+     *
+     * @param args argumentos
+     * @return true si el usuario quiere jugar haciendo trampas mostrando la
+     * solución en pantalla
+     */
+    private static boolean comprobar(String[] args) {
+        return args.length == 1 && args[0].toLowerCase().equals("trampas");
+    }
 
-	/**
-	 * Comprueba si el usuario quiere finalizar la partida.
-	 * 
-	 * @param jugada jugada en formato texto
-	 * @return true si el usuario introduce salir, false en caso contrario
-	 */
-	private static boolean comprobarSiFinalizaUsuarioPartida(String jugada) {
-		return jugada.equalsIgnoreCase("salir");
-	}
+    /**
+     * Comprueba si ha finalizado la partida.
+     *
+     * @return true si ha explotado alguna mina o hemos desmarcado todas las celdas
+     * ocultas menos las minas
+     */
+    private static boolean esFinDePartida() {
+        return (arbitro.haExplotadoAlgunaMina() || arbitro.haFinalizadoConExito());
+    }
 
-	/**
-	 * Comprueba si el usuario quiere descubrir celdas ocultas.
-	 * 
-	 * @param jugada jugada en formato texto
-	 * @return true si el usuario introduce salir, false en caso contrario
-	 */
-	private static boolean hayQueDescubrirOcultas(String jugada) {
-		return jugada.equalsIgnoreCase("descubrir");
-	}
+    /**
+     * Realiza la jugada introducida por teclado realizando las correspondientes
+     * comprobaciones relativas a las reglas del juego.
+     * <p>
+     * Se supone que la jugada en cuanto al formato ya ha sido validada previamente.
+     *
+     * @param jugada jugada
+     */
+    private static void realizarJugada(String jugada) {
+        int fila = leerFila(jugada);
+        int columna = leerColumna(jugada);
+        if (estaColocandoOQuitandoBandera(jugada)) {
+            if (arbitro.esLegalMarcar(fila, columna) || arbitro.esLegalDesmarcar(fila, columna)) {
+                // si el movimiento de marcado es legal
+                arbitro.marcarODesmarcar(fila, columna);
+            } else {
+                System.out.println(
+                        "Movimiento ilegal.\nComprueba que no estás marcando una celda ya marcada o descubierta\n"
+                                + "o que no estás intentando colocar más banderas que las permitidas.");
+            }
+        } else {
+            if (arbitro.esLegalDescubrir(fila, columna)) { // si el movimiento de descubrir es legal
+                arbitro.descubrir(fila, columna);
+            } else {
+                System.out.println(
+                        "Movimiento ilegal.\nComprueba que no estás descubriendo una celda ya descubierta o marcada.");
+            }
+        }
+    }
 
-	/**
-	 * Finaliza la partida informando al usuario y cerrando recursos abiertos.
-	 */
-	private static void finalizarPartida() {
-		if (arbitro.haExplotadoAlgunaMina()) {
-			System.out.println(arbitro.consultarTablero().toString());
-			System.out.println("Lo siento. ¡Has perdido la partida!");
-			System.out.println(arbitro.consultarTablero().obtenerSolucion());
-		} else if (arbitro.haFinalizadoConExito()) {
-			System.out.println(arbitro.consultarTablero().toString());
-			System.out.println("¡Enhorabuena! Has ganado la partida.");
-		}
-		System.out.println("Partida finalizada.");
-		scanner.close();
-	}
+    /**
+     * Muestra el mensaje de bienvenida con instrucciones para finalizar la partida.
+     */
+    private static void mostrarMensajeBienvenida() {
+        System.out.println("Bienvenido al juego del Buscaminas");
+        System.out.println("Para finalizar el juego introduzca \"salir\".");
+        System.out.println("Disfrute de la partida...");
+    }
 
-	/**
-	 * Muestra el tablero en pantalla con su estado actual.
-	 */
-	private static void mostrarTableroEnPantalla() {
-		System.out.println(arbitro.consultarTablero().toString());
-		System.out.println();
-	}
+    /**
+     * Mostrar al usuario información de error en el formato de entrada, mostrando
+     * ejemplos.
+     */
+    private static void mostrarErrorEnFormatoDeEntrada() {
+        System.out.println();
+        System.out.println("Error en el formato de entrada.");
+        System.out.println(
+                "El formato debe ser filacolumna y opcionalmente una m o M para marcar con bandera, por ejemplo 34 o 34m");
+        System.out.println("Los números estarán en el rango [0,7] y la letra opcional deberá ser una m o M\n");
+    }
 
-	/**
-	 * Inicializa el estado de los elementos de la partida.
-	 */
-	private static void inicializarPartida() {
-		// Inicializaciones
-		arbitro = new Arbitro();
-		// Abrimos la lectura desde teclado
-		scanner = new Scanner(System.in);
-	}
+    /**
+     * Comprueba si el usuario quiere finalizar la partida.
+     *
+     * @param jugada jugada en formato texto
+     * @return true si el usuario introduce salir, false en caso contrario
+     */
+    private static boolean comprobarSiFinalizaUsuarioPartida(String jugada) {
+        return jugada.equalsIgnoreCase("salir");
+    }
 
-	/**
-	 * Recoge jugada del teclado.
-	 * 
-	 * @return jugada jugada en formato texto
-	 */
-	private static String recogerJugada() {
-		System.out.print("Introduce jugada: (máscara fc / fc(M|m)): ");
-		return scanner.next();
-	}
+    /**
+     * Comprueba si el usuario quiere descubrir celdas ocultas.
+     *
+     * @param jugada jugada en formato texto
+     * @return true si el usuario introduce salir, false en caso contrario
+     */
+    private static boolean hayQueDescubrirOcultas(String jugada) {
+        return jugada.equalsIgnoreCase("descubrir");
+    }
 
-	/**
-	 * Valida la corrección del formato de la jugada. Solo comprueba la corrección
-	 * del formato de entrada. La jugada tiene que tener como máximo tres caracteres y
-	 * contener dos números en el rango del tamaño del tablero y una tercera letra
-	 * opcional para indicar que se quiere poner o quitar la bandera.
-	 * 
-	 * Otra mejor solución alternativa es el uso de expresiones regulares (se verán
-	 * en la asignatura de 3º Procesadores del Lenguaje).
-	 * 
-	 * @param jugada a validar
-	 * @return true si el formato de la jugada es correcta
-	 */
-	private static boolean validarFormato(String jugada) {
-		boolean estado = false;
-		if (jugada.length() >= 2 && esNumeroValido(jugada.charAt(0)) && esNumeroValido(jugada.charAt(1))) {
-			if (jugada.length() == 2) {
-				estado = true;
-			} else if (jugada.length() == 3 && esLetraValida(jugada.charAt(jugada.length()-1))) {
-				estado = true;
-			}
-		}
-		return estado;
-	}
+    /**
+     * Finaliza la partida informando al usuario y cerrando recursos abiertos.
+     */
+    private static void finalizarPartida() {
+        if (arbitro.haExplotadoAlgunaMina()) {
+            System.out.println(arbitro.consultarTablero().toString());
+            System.out.println("Lo siento. ¡Has perdido la partida!");
+            System.out.println(arbitro.consultarTablero().obtenerSolucion());
+        } else if (arbitro.haFinalizadoConExito()) {
+            System.out.println(arbitro.consultarTablero().toString());
+            System.out.println("¡Enhorabuena! Has ganado la partida.");
+        }
+        System.out.println("Partida finalizada.");
+        scanner.close();
+    }
 
-	/**
-	 * Comprueba si la letra es una m o M.
-	 * 
-	 * @param letra letra a comprobar
-	 * @return true si la letra no indica marcar con m o M
-	 */
-	private static boolean esLetraValida(char letra) {
-		return letra == 'm' || letra == 'M';
-	}
+    /**
+     * Muestra el tablero en pantalla con su estado actual.
+     */
+    private static void mostrarTableroEnPantalla() {
+        System.out.println(arbitro.consultarTablero().toString());
+        System.out.println();
+    }
 
-	/**
-	 * Comprueba si el número (en formato letra) está fuera del rango [0,7].
-	 * 
-	 * @param numero numero
-	 * @return true si el número no está en el rango, false en caso contrario
-	 */
-	private static boolean esNumeroValido(char numero) {
-		return numero >= '0' && numero <= '7';
-	}
+    /**
+     * Inicializa el estado de los elementos de la partida.
+     */
+    private static void inicializarPartida() {
+        // Inicializaciones
+        arbitro = new Arbitro();
+        // Abrimos la lectura desde teclado
+        scanner = new Scanner(System.in);
+    }
 
-	/**
-	 * Obtiene el número de fila.
-	 * 
-	 * @param jugada texto con la jugada
-	 * @return número de fila
-	 */
-	private static int leerFila(String jugada) {
-		return Integer.parseInt(Character.toString(jugada.charAt(0)));
-	}
+    /**
+     * Recoge jugada del teclado.
+     *
+     * @return jugada jugada en formato texto
+     */
+    private static String recogerJugada() {
+        System.out.print("Introduce jugada: (máscara fc / fc(M|m)): ");
+        return scanner.next();
+    }
 
-	/**
-	 * Obtiene el número de columna.
-	 * 
-	 * @param jugada texto con la jugada
-	 * @return número de columna
-	 */
-	private static int leerColumna(String jugada) {
-		return Integer.parseInt(Character.toString(jugada.charAt(1)));
-	}
+    /**
+     * Valida la corrección del formato de la jugada. Solo comprueba la corrección
+     * del formato de entrada. La jugada tiene que tener como máximo tres caracteres y
+     * contener dos números en el rango del tamaño del tablero y una tercera letra
+     * opcional para indicar que se quiere poner o quitar la bandera.
+     * <p>
+     * Otra mejor solución alternativa es el uso de expresiones regulares (se verán
+     * en la asignatura de 3º Procesadores del Lenguaje).
+     *
+     * @param jugada a validar
+     * @return true si el formato de la jugada es correcta
+     */
+    private static boolean validarFormato(String jugada) {
+        boolean estado = false;
+        if (jugada.length() >= 2 && esNumeroValido(jugada.charAt(0)) && esNumeroValido(jugada.charAt(1))) {
+            if (jugada.length() == 2) {
+                estado = true;
+            } else if (jugada.length() == 3 && esLetraValida(jugada.charAt(jugada.length() - 1))) {
+                estado = true;
+            }
+        }
+        return estado;
+    }
 
-	/**
-	 * Comprueba si la cadena de texto tiene un tercer carácter válido
-	 * que indica que se está colocando o quitando bandera.
-	 * 
-	 * @param jugada texto con la jugada
-	 * @return true si la cadena tiene 3 caracteres y el último caracter es una
-	 *         letra válida
-	 */
-	private static boolean estaColocandoOQuitandoBandera(String jugada) {
-		return jugada.length() == 3 && esLetraValida(jugada.charAt(jugada.length()-1));
-	}
+    /**
+     * Comprueba si la letra es una m o M.
+     *
+     * @param letra letra a comprobar
+     * @return true si la letra no indica marcar con m o M
+     */
+    private static boolean esLetraValida(char letra) {
+        return letra == 'm' || letra == 'M';
+    }
 
-	/**
-	 * Comprueba si se juega en modo mostrar solución.
-	 * 
-	 * @param flag bandera para mostrar la solución o no
-	 */
-	private static void hacerTrampas(boolean flag) {
-		if (flag) {
-			System.out.println(arbitro.consultarTablero().obtenerSolucion());
-		}
-	}
+    /**
+     * Comprueba si el número (en formato letra) está fuera del rango [0,7].
+     *
+     * @param numero numero
+     * @return true si el número no está en el rango, false en caso contrario
+     */
+    private static boolean esNumeroValido(char numero) {
+        return numero >= '0' && numero <= '7';
+    }
+
+    /**
+     * Obtiene el número de fila.
+     *
+     * @param jugada texto con la jugada
+     * @return número de fila
+     */
+    private static int leerFila(String jugada) {
+        return Integer.parseInt(Character.toString(jugada.charAt(0)));
+    }
+
+    /**
+     * Obtiene el número de columna.
+     *
+     * @param jugada texto con la jugada
+     * @return número de columna
+     */
+    private static int leerColumna(String jugada) {
+        return Integer.parseInt(Character.toString(jugada.charAt(1)));
+    }
+
+    /**
+     * Comprueba si la cadena de texto tiene un tercer carácter válido
+     * que indica que se está colocando o quitando bandera.
+     *
+     * @param jugada texto con la jugada
+     * @return true si la cadena tiene 3 caracteres y el último caracter es una
+     * letra válida
+     */
+    private static boolean estaColocandoOQuitandoBandera(String jugada) {
+        return jugada.length() == 3 && esLetraValida(jugada.charAt(jugada.length() - 1));
+    }
+
+    /**
+     * Comprueba si se juega en modo mostrar solución.
+     *
+     * @param flag bandera para mostrar la solución o no
+     */
+    private static void hacerTrampas(boolean flag) {
+        if (flag) {
+            System.out.println(arbitro.consultarTablero().obtenerSolucion());
+        }
+    }
 
 }

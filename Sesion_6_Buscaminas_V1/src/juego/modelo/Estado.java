@@ -7,12 +7,25 @@ package juego.modelo;
  * @version 1.0
  */
 public enum Estado {
-    MARCADA('P'), DESCUBIERTA('0'), OCULTA('-');
+
+    /**
+     * Estado Marcado
+     */
+    MARCADA('P'),
+
+    /**
+     * Estado Descubierta
+     */
+    DESCUBIERTA('0'),
+
+    /**
+     * Estado Oculta
+     */
+    OCULTA('-');
 
     /***
      * Caracter que indica el estado.
      */
-
     private char letra;
 
     /**
@@ -20,8 +33,8 @@ public enum Estado {
      *
      * @param letra letra de estado
      */
-    private Estado(char letra){
-        this.letra=letra;
+    private Estado(char letra) {
+        this.letra = letra;
     }
 
     /**

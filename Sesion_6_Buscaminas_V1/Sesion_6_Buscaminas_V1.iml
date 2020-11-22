@@ -11,5 +11,8 @@
     <orderEntry type="library" name="junit-platform-console-standalone-1.6.2" level="project" />
     <orderEntry type="library" name="doccheck" level="project" />
     <orderEntry type="library" name="buscaminas-gui-lib-1.0.0" level="project" />
+    <orderEntry type="library" name="buscaminas-gui-lib-1.0.0 (2)" level="project" />
+    <orderEntry type="library" name="doccheck (2)" level="project" />
+    <orderEntry type="library" name="junit-platform-console-standalone-1.6.2 (2)" level="project" />
   </component>
 </module>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="doccheck (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/doccheck.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
