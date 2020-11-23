@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="buscaminas-gui-lib-1.0.0" />
+  <library name="doccheck" />
+  <library name="junit-platform-console-standalone-1.6.2" />
+  <library name="buscaminas-gui-lib-1.0.0 (2)">
+    <archive path="E:/ONE_DRIVE/OneDrive - Universidad de Burgos/UNIVERSIDAD/3ºañoUBU/MEPRO/MEPRO_REPO/MEPRO/Sesion_6_Buscaminas_V1/lib/buscaminas-gui-lib-1.0.0.jar" />
+  </library>
+  <library name="doccheck (2)">
+    <archive path="E:/ONE_DRIVE/OneDrive - Universidad de Burgos/UNIVERSIDAD/3ºañoUBU/MEPRO/MEPRO_REPO/MEPRO/Sesion_6_Buscaminas_V1/lib/doccheck.jar" />
+  </library>
+  <library name="junit-platform-console-standalone-1.6.2 (2)">
+    <archive path="E:/ONE_DRIVE/OneDrive - Universidad de Burgos/UNIVERSIDAD/3ºañoUBU/MEPRO/MEPRO_REPO/MEPRO/Sesion_6_Buscaminas_V1/lib/junit-platform-console-standalone-1.6.2.jar" />
+  </library>
+</eclipse-userlibraries>
+
