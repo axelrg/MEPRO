@@ -10,7 +10,7 @@ import juego.util.CoordenadasIncorrectasException;
  * @author Axel Rubio Gonzalez
  * @version 1.0
  */
-public class ArbitroSeguro extends ArbitroAbstracto{
+public class ArbitroSeguro extends ArbitroAbstracto {
 
 
     /**
@@ -18,7 +18,7 @@ public class ArbitroSeguro extends ArbitroAbstracto{
      *
      * @param tablero tablero en el que va a realizarse la partida
      */
-    public ArbitroSeguro(Tablero tablero){
+    public ArbitroSeguro(Tablero tablero) {
         super(tablero);
     }
 
@@ -26,10 +26,10 @@ public class ArbitroSeguro extends ArbitroAbstracto{
     /**
      * Descubre la celda si cumple la condición de ser legal.
      *
-     * @param fila fila de la celda
+     * @param fila    fila de la celda
      * @param columna columna de la celda
      */
-    public void descubrir(int fila, int columna) throws CoordenadasIncorrectasException{
+    public void descubrir(int fila, int columna) throws CoordenadasIncorrectasException {
         if (esLegalDescubrir(fila, columna)) {
             tablero.descubrir(fila, columna);
         }

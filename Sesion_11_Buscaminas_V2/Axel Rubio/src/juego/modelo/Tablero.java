@@ -3,6 +3,7 @@ package juego.modelo;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
 import juego.control.DistanciaChebyshev;
 import juego.util.CoordenadasIncorrectasException;
 import juego.util.Sentido;
@@ -38,7 +39,7 @@ public class Tablero {
         for (int i = 0; i < NUMERO_FILAS; i++) {
             tablero.add(new ArrayList<>());
             for (int j = 0; j < NUMERO_COLUMNAS; j++) {
-                tablero.get(i).add(new Celda(i,j));
+                tablero.get(i).add(new Celda(i, j));
             }
         }
     }
@@ -64,18 +65,18 @@ public class Tablero {
          * Clon del tablero
          */
 
-            Tablero tablero1 = new Tablero();
-            for (int i = 0; i < NUMERO_FILAS; i++) {
-                for (int j = 0; j < NUMERO_COLUMNAS; j++) {
-                    try {
-                        tablero1.tablero.get(i).set(j, this.clonarCelda(i, j));
-                        } catch (CoordenadasIncorrectasException ex) {
-                            ex.printStackTrace();
-                    }
+        Tablero tablero1 = new Tablero();
+        for (int i = 0; i < NUMERO_FILAS; i++) {
+            for (int j = 0; j < NUMERO_COLUMNAS; j++) {
+                try {
+                    tablero1.tablero.get(i).set(j, this.clonarCelda(i, j));
+                } catch (CoordenadasIncorrectasException ex) {
+                    ex.printStackTrace();
                 }
-
             }
-            return tablero1;
+
+        }
+        return tablero1;
 
     }
 
@@ -108,8 +109,8 @@ public class Tablero {
         for (int i = 0; i < NUMERO_FILAS; i++) {
             for (int j = 0; j < NUMERO_COLUMNAS; j++) {
                 try {
-                    array.add(obtenerCelda(i,j));
-                } catch (CoordenadasIncorrectasException ex){
+                    array.add(obtenerCelda(i, j));
+                } catch (CoordenadasIncorrectasException ex) {
                     ex.printStackTrace();
                 }
             }
@@ -120,9 +121,8 @@ public class Tablero {
 
     /**
      * Coloca las minas en las celdas del tablero aleatoriamente.
-     *
      */
-    public void colocarMinas(){
+    public void colocarMinas() {
         /**
          * Contador que lleva el recuento del numero de minas ya colocadas
          */
@@ -136,22 +136,22 @@ public class Tablero {
          */
         int y;
 
-        Random rd= new Random();
-        while (numeroMinas < 10){
+        Random rd = new Random();
+        while (numeroMinas < 10) {
             x = rd.nextInt(NUMERO_FILAS);
             y = rd.nextInt(NUMERO_COLUMNAS);
             /**
              * Creamos la celda fin con las coordenadas aleatorias
              */
             Celda fin = new Celda(x, y);
-                if (estaEnTablero(x, y) && !tablero.get(x).get(y).tieneMina()) {
-                    try {
-                        obtenerCelda(x,y).colocarMina();
-                    }catch (CoordenadasIncorrectasException ex){
-                        throw new RuntimeException("Se detiene la ejecucion por una excepcion", ex);
-                    }
-                    numeroMinas++;
+            if (estaEnTablero(x, y) && !tablero.get(x).get(y).tieneMina()) {
+                try {
+                    obtenerCelda(x, y).colocarMina();
+                } catch (CoordenadasIncorrectasException ex) {
+                    throw new RuntimeException("Se detiene la ejecucion por una excepcion", ex);
                 }
+                numeroMinas++;
+            }
         }
         calcularMinasAdyacentes();
     }
@@ -181,7 +181,7 @@ public class Tablero {
          * Establecemos la semilla
          */
         rd.setSeed(inicio.obtenerFila() * 10L + inicio.obtenerColumna());
-        while (numeroMinas < 10){
+        while (numeroMinas < 10) {
             x = rd.nextInt(NUMERO_FILAS);
             y = rd.nextInt(NUMERO_COLUMNAS);
             /**
@@ -191,8 +191,8 @@ public class Tablero {
             if (x != inicio.obtenerFila() || y != inicio.obtenerColumna())
                 if (distancia.calcular(fin, inicio) >= 2 && estaEnTablero(x, y) && !tablero.get(x).get(y).tieneMina()) {
                     try {
-                        obtenerCelda(x,y).colocarMina();
-                    }catch (CoordenadasIncorrectasException ex){
+                        obtenerCelda(x, y).colocarMina();
+                    } catch (CoordenadasIncorrectasException ex) {
                         throw new RuntimeException("Se detiene la ejecucion por una excepcion", ex);
                     }
                     numeroMinas++;
@@ -223,12 +223,12 @@ public class Tablero {
                     }
                 }
                 try {
-                    if (obtenerCelda(i,j).tieneMina()) {
-                        obtenerCelda(i,j).establecerNumeroMinasAdyacentes(-1);
+                    if (obtenerCelda(i, j).tieneMina()) {
+                        obtenerCelda(i, j).establecerNumeroMinasAdyacentes(-1);
                     } else {
-                        obtenerCelda(i,j).establecerNumeroMinasAdyacentes(minas);
+                        obtenerCelda(i, j).establecerNumeroMinasAdyacentes(minas);
                     }
-                } catch (CoordenadasIncorrectasException ex){
+                } catch (CoordenadasIncorrectasException ex) {
                     throw new RuntimeException("Se detiene la ejecucion por una excepcion", ex);
                 }
             }
@@ -248,10 +248,10 @@ public class Tablero {
         for (int i = 0; i < obtenerNumeroFilas(); i++) {
             for (int j = 0; j < obtenerNumeroColumnas(); j++) {
                 try {
-                    if (obtenerCelda(i,j).estaMarcada()) {
+                    if (obtenerCelda(i, j).estaMarcada()) {
                         total++;
                     }
-                }catch (CoordenadasIncorrectasException ex){
+                } catch (CoordenadasIncorrectasException ex) {
                     throw new RuntimeException("Se detiene la ejecucion por una excepcion", ex);
                 }
 
@@ -273,10 +273,10 @@ public class Tablero {
         for (int i = 0; i < obtenerNumeroFilas(); i++) {
             for (int j = 0; j < obtenerNumeroColumnas(); j++) {
                 try {
-                    if (obtenerCelda(i,j).estaDescubierta()) {
+                    if (obtenerCelda(i, j).estaDescubierta()) {
                         total++;
                     }
-                }catch (CoordenadasIncorrectasException ex){
+                } catch (CoordenadasIncorrectasException ex) {
                     throw new RuntimeException("Se detiene la ejecucion por una excepcion", ex);
                 }
 
@@ -298,10 +298,10 @@ public class Tablero {
         for (int i = 0; i < obtenerNumeroFilas(); i++) {
             for (int j = 0; j < obtenerNumeroColumnas(); j++) {
                 try {
-                    if (obtenerCelda(i,j).tieneMina()) {
+                    if (obtenerCelda(i, j).tieneMina()) {
                         total++;
                     }
-                }catch (CoordenadasIncorrectasException ex){
+                } catch (CoordenadasIncorrectasException ex) {
                     throw new RuntimeException("Se detiene la ejecucion por una excepcion", ex);
                 }
 
@@ -323,10 +323,10 @@ public class Tablero {
         for (int i = 0; i < NUMERO_FILAS; i++) {
             for (int j = 0; j < NUMERO_COLUMNAS; j++) {
                 try {
-                    if (obtenerCelda(i,j).estaDescubierta() && obtenerCelda(i,j).tieneMina()) {
+                    if (obtenerCelda(i, j).estaDescubierta() && obtenerCelda(i, j).tieneMina()) {
                         total++;
                     }
-                }catch (CoordenadasIncorrectasException ex){
+                } catch (CoordenadasIncorrectasException ex) {
                     throw new RuntimeException("Se detiene la ejecucion por una excepcion", ex);
                 }
 
@@ -353,7 +353,7 @@ public class Tablero {
      * @param columna columna de la celda
      * @throws CoordenadasIncorrectasException si se introducen coordenadas fuera del tablero
      */
-    public void descubrir(int fila, int columna) throws CoordenadasIncorrectasException{
+    public void descubrir(int fila, int columna) throws CoordenadasIncorrectasException {
 
         if (estaEnTablero(fila, columna)) {
             if (contarMinas() == 0) {
@@ -383,9 +383,9 @@ public class Tablero {
 
                     if (estaEnTablero(fila1, columna1)) {
                         if (!obtenerCelda(fila1, columna1).tieneMina()) {
-                            if (obtenerCelda(fila1,columna1).estaOculta()) {
-                                if (obtenerCelda(fila1,columna1).obtenerNumeroMinasAdyacentes() != 0) {
-                                    obtenerCelda(fila1,columna1).establecerSiguienteEstadoDescubrir();
+                            if (obtenerCelda(fila1, columna1).estaOculta()) {
+                                if (obtenerCelda(fila1, columna1).obtenerNumeroMinasAdyacentes() != 0) {
+                                    obtenerCelda(fila1, columna1).establecerSiguienteEstadoDescubrir();
                                 } else {
                                     descubrir(fila1, columna1);
                                 }
@@ -396,7 +396,7 @@ public class Tablero {
             } else {
                 tablero.get(fila).get(columna).establecerSiguienteEstadoDescubrir();
             }
-        }else {
+        } else {
             throw new CoordenadasIncorrectasException("Coordenadas fuera del tablero");
         }
     }
@@ -408,10 +408,10 @@ public class Tablero {
      * @param columna columna de la celda
      * @throws CoordenadasIncorrectasException si se introducen coordenadas fuera del tablero
      */
-    public void marcarDesmarcar(int fila, int columna) throws CoordenadasIncorrectasException{
-        if (estaEnTablero(fila, columna)){
-            obtenerCelda(fila,columna).establecerSiguienteEstadoMarcar();
-        }else {
+    public void marcarDesmarcar(int fila, int columna) throws CoordenadasIncorrectasException {
+        if (estaEnTablero(fila, columna)) {
+            obtenerCelda(fila, columna).establecerSiguienteEstadoMarcar();
+        } else {
             throw new CoordenadasIncorrectasException("Coordenadas fuera del tablero");
         }
     }
@@ -425,7 +425,7 @@ public class Tablero {
      * @return la celda con las coordenadas dadas
      * @throws CoordenadasIncorrectasException si se introducen coordenadas fuera del tablero
      */
-    Celda obtenerCelda(int fila, int columna) throws CoordenadasIncorrectasException{
+    Celda obtenerCelda(int fila, int columna) throws CoordenadasIncorrectasException {
         if (estaEnTablero(fila, columna)) {
             return tablero.get(fila).get(columna);
         } else {
@@ -436,7 +436,7 @@ public class Tablero {
     /**
      * Calcula el numero de columnas.
      *
-     * @return  entero con el numero de columnas
+     * @return entero con el numero de columnas
      */
     public int obtenerNumeroColumnas() {
         return tablero.get(0).size();
@@ -445,7 +445,7 @@ public class Tablero {
     /**
      * Calcula el numero de filas.
      *
-     * @return  entero con el numero de filas
+     * @return entero con el numero de filas
      */
     public int obtenerNumeroFilas() {
         return tablero.size();
@@ -454,7 +454,7 @@ public class Tablero {
     /**
      * Devuelve la solucion del juego.
      *
-     * @return  string con la solucion del juego
+     * @return string con la solucion del juego
      */
     public String obtenerSolucion() {
         /**
@@ -465,8 +465,8 @@ public class Tablero {
             texto.append('\n').append(i).append('\t');
             for (int j = 0; j < NUMERO_COLUMNAS; j++) {
                 try {
-                    texto.append(obtenerCelda(i,j).obtenerTextoSolucion());
-                }catch (CoordenadasIncorrectasException ex){
+                    texto.append(obtenerCelda(i, j).obtenerTextoSolucion());
+                } catch (CoordenadasIncorrectasException ex) {
                     throw new RuntimeException("Se detiene la ejecucion por una excepcion", ex);
                 }
             }
@@ -478,7 +478,7 @@ public class Tablero {
     /**
      * Devuelve el tablero no solucionado del juego.
      *
-     * @return  string con el estado actual del tablero
+     * @return string con el estado actual del tablero
      */
     @Override
     public String toString() {
@@ -490,8 +490,8 @@ public class Tablero {
             texto.append('\n').append(i).append('\t');
             for (int j = 0; j < NUMERO_COLUMNAS; j++) {
                 try {
-                    texto.append(obtenerCelda(i,j).obtenerTextoEstado());
-                }catch (CoordenadasIncorrectasException ex){
+                    texto.append(obtenerCelda(i, j).obtenerTextoEstado());
+                } catch (CoordenadasIncorrectasException ex) {
                     throw new RuntimeException("Se detiene la ejecucion por una excepcion", ex);
                 }
             }

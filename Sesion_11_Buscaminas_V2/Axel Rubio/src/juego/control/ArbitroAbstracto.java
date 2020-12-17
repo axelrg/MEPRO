@@ -25,6 +25,7 @@ public abstract class ArbitroAbstracto implements Arbitro {
 
     /**
      * Constructor de la clase, crea un objeto tablero.
+     *
      * @param tablero un objeto tablero
      */
     public ArbitroAbstracto(Tablero tablero) {

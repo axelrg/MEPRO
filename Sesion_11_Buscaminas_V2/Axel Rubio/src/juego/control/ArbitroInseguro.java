@@ -30,10 +30,10 @@ public class ArbitroInseguro extends ArbitroAbstracto {
      * @param columna columna de la celda
      */
     public void descubrir(int fila, int columna) throws CoordenadasIncorrectasException {
-        if (tablero.contarMinas() == 0){
+        if (tablero.contarMinas() == 0) {
             tablero.colocarMinas();
         }
-        if (esLegalDescubrir(fila, columna)){
+        if (esLegalDescubrir(fila, columna)) {
             tablero.descubrir(fila, columna);
         }
     }

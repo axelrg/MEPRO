@@ -1,4 +1,5 @@
 package juego.modelo;
+
 import java.util.Objects;
 
 /**
@@ -8,23 +9,35 @@ import java.util.Objects;
  * @version 1.0
  */
 public class Celda {
-    /**Constante tipo String con el texto para mina.*/
+    /**
+     * Constante tipo String con el texto para mina.
+     */
     public static final String TEXTO_MINA = " M ";
-    /**Entero que guarda la fila de la celda.*/
+    /**
+     * Entero que guarda la fila de la celda.
+     */
     private int fila;
-    /**Entero que guarda la columna de la celda.*/
+    /**
+     * Entero que guarda la columna de la celda.
+     */
     private int columna;
-    /**guarda el estado de la celda.*/
+    /**
+     * guarda el estado de la celda.
+     */
     private Estado estado;
-    /**Booleano para indicar si la celda tiene mina o no.*/
+    /**
+     * Booleano para indicar si la celda tiene mina o no.
+     */
     private boolean tieneMina;
-    /**Entero para indicar el numero de minas en las celdas adyacentes.*/
+    /**
+     * Entero para indicar el numero de minas en las celdas adyacentes.
+     */
     private int numeroMinas;
 
     /**
      * Constructor de la clase celda.
      *
-     * @param fila fila de la celda
+     * @param fila    fila de la celda
      * @param columna columna de la celda
      */
     public Celda(int fila, int columna) {
@@ -45,7 +58,7 @@ public class Celda {
          * Creamos un nuevo objeto celda
          * */
         Celda celda = new Celda(this.fila, this.columna);
-        celda.estado=estado;
+        celda.estado = estado;
         celda.tieneMina = tieneMina();
         celda.numeroMinas = obtenerNumeroMinasAdyacentes();
         return celda;

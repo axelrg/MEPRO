@@ -1,0 +1,6 @@
+Autor: Áxel Rubio González
+
+Consideraciones:
+	-He añadido los script para compilar y ejecutar los test a una carpeta llamada scripts_text, si deseara usarlos
+	 muevalos al directorio anterior si desea recompilar o ejecutar los test.
+
