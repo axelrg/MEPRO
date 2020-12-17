@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5ee1e9b3-7f7d-4c5f-b6f6-ce590a61e46f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="package-info" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1lYWrZqZrfPiISGVAJDAQ8zdv9o" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test/juego/util" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ONE_DRIVE\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_11_Buscaminas_V2\test\juego\util" />
+      <recent name="C:\Users\Axel\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_11_Buscaminas_V2\test\juego\control" />
+      <recent name="C:\Users\Axel\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_11_Buscaminas_V2\src\juego\textui" />
+      <recent name="E:\ONE_DRIVE\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_11_Buscaminas_V2\src\juego\control" />
+      <recent name="E:\ONE_DRIVE\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_11_Buscaminas_V2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TEXTUI_Buscaminas">
+    <configuration name="GUI_Insegro" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="juego.gui.Buscaminas" />
+      <module name="Sesion_11_Buscaminas_V2" />
+      <option name="PROGRAM_PARAMETERS" value="inseguro" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GUI_Seguro" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="juego.gui.Buscaminas" />
+      <module name="Sesion_11_Buscaminas_V2" />
+      <option name="PROGRAM_PARAMETERS" value="seguro" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TEXTUI_Buscaminas" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="juego.textui.Buscaminas" />
+      <module name="Sesion_11_Buscaminas_V2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="juego.textui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in Sesion_11_Buscaminas_V2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sesion_11_Buscaminas_V2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArbitroEstadoInicialTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sesion_11_Buscaminas_V2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="juego.control.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="juego.control" />
+      <option name="MAIN_CLASS_NAME" value="juego.control.ArbitroEstadoInicialTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="juego.control in Sesion_11_Buscaminas_V2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sesion_11_Buscaminas_V2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="juego.control.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="juego.control" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="juego.util in Sesion_11_Buscaminas_V2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sesion_11_Buscaminas_V2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="juego.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="juego.util" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.GUI_Insegro" />
+      <item itemvalue="Application.GUI_Seguro" />
+      <item itemvalue="Application.TEXTUI_Buscaminas" />
+      <item itemvalue="JUnit.All in Sesion_11_Buscaminas_V2" />
+      <item itemvalue="JUnit.ArbitroEstadoInicialTest" />
+      <item itemvalue="JUnit.juego.control in Sesion_11_Buscaminas_V2" />
+      <item itemvalue="JUnit.juego.util in Sesion_11_Buscaminas_V2" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TEXTUI_Buscaminas" />
+        <item itemvalue="JUnit.All in Sesion_11_Buscaminas_V2" />
+        <item itemvalue="JUnit.juego.util in Sesion_11_Buscaminas_V2" />
+        <item itemvalue="JUnit.ArbitroEstadoInicialTest" />
+        <item itemvalue="JUnit.juego.control in Sesion_11_Buscaminas_V2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ee1e9b3-7f7d-4c5f-b6f6-ce590a61e46f" name="Default Changelist" comment="" />
+      <created>1607774706283</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607774706283</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="174" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608205657338">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608205657338" />
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1607881194607">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607881194607" />
+    <state x="336" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1607956983652">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="336" y="184" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1607956983652" />
+    <state x="420" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607949969020" />
+    <state x="689" y="321" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1608205339585">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="321" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608205339585" />
+    <state x="416" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1608212558489">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="416" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608212558489" />
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1608205197692">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1608205197692" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1608231231081">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607962947729" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608231231081" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1608231231081">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607962947729" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608231231081" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1608231231081">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607962947729" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608231231081" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1608231231081">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607962947729" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608231231081" />
+    <state x="189" y="97" key="SettingsEditor" timestamp="1607878822014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="189" y="97" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607878822014" />
+    <state x="425" y="189" key="run.anything.popup" timestamp="1607940069063">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1607940069063" />
+  </component>
+</project>
