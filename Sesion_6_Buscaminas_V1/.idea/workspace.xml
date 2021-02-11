@@ -67,7 +67,7 @@
       <recent name="E:\ONE_DRIVE\OneDrive - Universidad de Burgos\UNIVERSIDAD\3ºañoUBU\MEPRO\MEPRO_REPO\MEPRO\Sesion_6_Buscaminas_V1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Buscaminas">
+  <component name="RunManager" selected="JUnit.All in Sesion_6_Buscaminas_V1">
     <configuration name="Buscaminas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="juego.gui.Buscaminas" />
       <module name="Sesion_6_Buscaminas_V1" />
@@ -95,8 +95,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Buscaminas" />
         <item itemvalue="JUnit.All in Sesion_6_Buscaminas_V1" />
+        <item itemvalue="Application.Buscaminas" />
       </list>
     </recent_temporary>
   </component>
@@ -163,25 +163,25 @@
     </state>
     <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607939743617" />
     <state x="686" y="197" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607859375529" />
-    <state width="1877" height="185" key="GridCell.Tab.0.bottom" timestamp="1607437529265">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="290" key="GridCell.Tab.0.bottom" timestamp="1608574206197">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1606156045450" />
+    <state width="1493" height="290" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1608574206197" />
     <state width="1877" height="185" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607437529265" />
-    <state width="1877" height="185" key="GridCell.Tab.0.center" timestamp="1607437529265">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="290" key="GridCell.Tab.0.center" timestamp="1608574206197">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1606156045450" />
+    <state width="1493" height="290" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1608574206197" />
     <state width="1877" height="185" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607437529265" />
-    <state width="1877" height="185" key="GridCell.Tab.0.left" timestamp="1607437529265">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="290" key="GridCell.Tab.0.left" timestamp="1608574206197">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1606156045450" />
+    <state width="1493" height="290" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1608574206197" />
     <state width="1877" height="185" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607437529265" />
-    <state width="1877" height="185" key="GridCell.Tab.0.right" timestamp="1607437529265">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="290" key="GridCell.Tab.0.right" timestamp="1608574206197">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1606156045450" />
+    <state width="1493" height="290" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1608574206197" />
     <state width="1877" height="185" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607437529265" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1605532287882">
       <screen x="0" y="0" width="1920" height="1040" />
